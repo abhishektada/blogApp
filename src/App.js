@@ -10,7 +10,6 @@ import Alert from "./components/Alert";
 import ContextBlog from "./contextAPI/ContextBlog";
 
 function App() {
-  
   return (
     <>
       <ContextBlog>
