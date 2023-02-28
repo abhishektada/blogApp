@@ -44,34 +44,28 @@ export default function Signup() {
   };
   return (
     <>
-      <div
-        style={{
-          width: "100%",
-          height: "83%",
-          backgroundImage: `url("${loginBg}")`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          backgroundPosition: "0% 0%",
-          position: "absolute",
-          filter: "brightness(0.5)",
-          top: "6%",
-          left: "0",
+      <div className="d-flex justify-content-center align-items-center">
+      <img
+      className="p-0 m-0"
+      src={loginBg}
+      style={{
+        width: "100%",
+        height:"800px",
+        position: "relative",
+        filter: "brightness(0.5)",
         }}
-      ></div>
+        height="800"
+        alt="bg"
+      ></img>
       <div
-        className="container text-center"
-        style={{
-          width: "24%",
-          maxHeight: "25%",
-          position: "absolute",
-          zIndex: "100",
-          top: "15%",
-          left: "38%",
-        }}
+           className=" text-center position-absolute"
+           style={{
+             width:"250px"
+           }}
       >
-        <div className="form-signin">
-          <form className="">
-            <img className="mb-4" src={icon} alt="" width="100" />
+         <div className="form-signin d-flex justify-content-center align-items-center ">
+          <form className="w-100">
+            <img className="mb-4" src={icon} alt="" width="80" />
             <h1 className="h3 mb-3 text-white fw-normal">Please sign up</h1>
 
             <div className="form-floating">
@@ -84,8 +78,9 @@ export default function Signup() {
                 onChange={handleOnChange}
                 placeholder="Full Name"
               />
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">Username</label>
             </div>
+
             <div className="form-floating">
               <input
                 type="phone"
@@ -139,6 +134,7 @@ export default function Signup() {
           </form>
         </div>
       </div>
+      </div> 
     </>
   );
 }

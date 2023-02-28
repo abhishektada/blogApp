@@ -46,34 +46,28 @@ export default function Login() {
 
   return (
     <>
-      <div
+    <div className="d-flex justify-content-center align-items-center">
+      <img
+        className="p-0 m-0"
+        src={loginBg}
         style={{
           width: "100%",
-          height: "83%",
-          backgroundImage: `url("${loginBg}")`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          backgroundPosition: "0% 0%",
-          position: "absolute",
+          height:"800px",
+          position: "relative",
           filter: "brightness(0.5)",
-          top: "6%",
-          left: "0",
         }}
-      ></div>
+        height="800"
+        alt="bg"
+      />
       <div
-        className="container text-center"
+        className=" text-center position-absolute"
         style={{
-          width: "24%",
-          maxHeight: "25%",
-          position: "absolute",
-          zIndex: "100",
-          top: "22%",
-          left: "38%",
+          width:"250px"
         }}
       >
-        <div className="form-signin">
-          <form className="">
-            <img className="mb-4" src={icon} alt="" width="100" />
+        <div className="form-signin d-flex justify-content-center align-items-center ">
+          <form className="w-100">
+            <img className="mb-4" src={icon} alt="" width="80" />
             <h1 className="h3 mb-3 text-white fw-normal">Please sign in</h1>
 
             <div className="form-floating">
@@ -116,6 +110,7 @@ export default function Login() {
             <p className="mt-4 mb-3 text-white">© 2023</p>
           </form>
         </div>
+      </div>
       </div>
     </>
   );

@@ -50,6 +50,11 @@ export default function Blogcard(props) {
     deleteEndPoint(_id)
   };
 
+  const handleEdit = async()=>{
+    props.handleEditClick(props.blog)
+    console.log("edit")
+  }
+
   return (
     <div className="card" style={{ width: "25rem" }}>
       <div className="d-flex justify-content-left align-items-center mx-3 my-1">
@@ -76,7 +81,7 @@ export default function Blogcard(props) {
               <hr className="dropdown-divider" />
             </li>
             <li>
-              <button className="dropdown-item fw-bold fs-6 text-success">
+              <button className="dropdown-item fw-bold fs-6 text-success" onClick={handleEdit}>
                 Edit
               </button>
             </li>

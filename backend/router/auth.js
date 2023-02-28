@@ -28,11 +28,11 @@ router.post(
 
     try {
       const { name, email, password, phone } = req.body;
-      const dbUser = await User.findOne({ email: email });
       const salt = await bcrypt.genSalt(10);
+      const dbUser = await User.findOne({ email: email });
       const hashPassword = await bcrypt.hash(password, salt);
+      const dbUserPhone = await User.findOne({ phone: phone });
       if (!dbUser) {
-        const dbUserPhone = await User.findOne({ phone: phone });
         if (!dbUserPhone) {
           await User.create({
             name: name,

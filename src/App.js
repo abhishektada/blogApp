@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import Alert from "./components/Alert";
+import Userdetails from "./components/Userdetails";
 import ContextBlog from "./contextAPI/ContextBlog";
 
 function App() {
@@ -18,30 +19,16 @@ function App() {
             <Navebar />
             <Alert />
           </div>
-          <div
-            className="container"
-            style={{ marginTop: "9vh", marginBottom: "11vh" }}
-          >
+          <div className="" style={{ marginTop: "65px", marginBottom: "0px" }}>
             <Routes>
-              <Route exact path="/" element={<Home  />} />
-              <Route
-                exact
-                path="/login"
-                element={<Login />}
-              />
-              <Route
-                exact
-                path="/signup"
-                element={<Signup />}
-              />
-              <Route
-                exact
-                path="/profile"
-                element={<Profile />}
-              />
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/profile" element={<Profile />} />
+              <Route exact path="/userdetails" element={<Userdetails />} />
+              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/signup" element={<Signup />} />
             </Routes>
           </div>
-          <div className="fixed-bottom">
+          <div className="" style={{}}>
             <Footer />
           </div>
         </Router>

@@ -34,6 +34,7 @@ app.use((req, res, next) => {
 });
 app.use("/auth", require("./router/auth"));
 app.use("/blog", require("./router/blog"));
+app.use("/user", require("./router/userData"));
 app.listen(port, () => {
   console.log(`server Start at port ${host}:${port}`);
 });
